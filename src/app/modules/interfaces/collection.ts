@@ -11,22 +11,22 @@ export interface Items{
 }
 
 export interface Data{
-  center:string;
-  date_created:string;
-  description:string;
-  description_508:string;
-  keywords:string[];
-  media_type:string;
-  nasa_id:string;
-  secondary_creator:string;
-  title:string;
+  center:           string;
+  date_created:      string;
+  description:      string;
+  description508:   string;
+  keywords:         string[];
+  mediaType:        string;
+  nasaID:           string;
+  secondaryCreator: string;
+  title:            string;
 }
 
 export interface Links{
-  href:string;
-  rel:string;
-  render:string;
-  width:number;
-  size:number;
-  height:number;
+  href:   string;
+  rel:    string;
+  render: string;
+  width:  number;
+  size:   number;
+  height: number;
 }

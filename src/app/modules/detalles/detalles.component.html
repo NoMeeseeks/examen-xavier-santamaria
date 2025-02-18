@@ -1,0 +1,11 @@
+<div class="container text-center">
+  <div class="row">
+    @for (item of links;track $index){
+      <div class="col">
+        <div class="card gap-2 pt-2 pb-2" style="width: 18rem;">
+          <img src="{{item.href}}" class="card-img-top" alt="...">
+        </div>
+      </div>
+    }
+  </div>
+</div>

@@ -1,17 +1,28 @@
 <table class="table">
   <thead>
   <tr>
-    <th scope="col">#</th>
-    <th scope="col">First</th>
-    <th scope="col">Last</th>
-    <th scope="col">Handle</th>
+    <th scope="col">Titulo</th>
+    <th scope="col">Dia de creacion</th>
+    <th scope="col">Descripcion</th>
+    <th scope="col">Boton</th>
   </tr>
   </thead>
   <tbody>
-  <tr>
-    <th scope="row">1</th>
-    <td>Mark</td>
-    <td>Otto</td>
-  </tr>
+
+    @for (i of items; track $index) {
+      @if ($index < 5) {
+        @for (d of i.data; track $index) {
+          <tr>
+            <td>{{ d.title }}</td>
+            <td>{{ d.date_created }}</td>
+            <td>{{ d.description }}</td>
+            <td>
+              <button class="btn btn-primary" (click)="enviarDatos(i.links)">+</button>
+            </td>
+          </tr>
+        }
+      }
+    }
+
   </tbody>
 </table>
